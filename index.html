@@ -28,46 +28,61 @@
     </header>
 
     <main>
-        <h2>Table of content</h2>
-        <ul>
-          <li>
-              <a href="#buttons">Buttons and links</a>
-          </li>
-          <li>
-              <a href="#contrasts">Color contrasts</a>
-          </li>
-          <li>
-              <a href="#headings">Headings</a>
-          </li>
-          <li>
-              <a href="#keyboard">Keyboard navigation</a>
-          </li>
-          <li>
-              <a href="#modal">Modal</a>
-          </li>
-          <li>
-              <a href="#form">Form</a>
-          </li>
-          <li>
-              <a href="#accordion">Accordion menu</a>
-          </li>
-          <li>
-              <a href="#tabs">Tabs</a>
-          </li>
-          <li>
-              <a href="#map">Map</a>
-          </li>
-          <li>
-              <a href="#carousel">Carousel</a>
-          </li>
-        </ul>
-      
-        <section class="tools">
-          <a class="tool-link" href="A11Y-checklist accessibility.pdf" target="_blank">Checklist</a>
-          <a class="tool-link" href="https://contrast-ratio.com/" rel="noopener noreferrer" target="_blank">Contrast checker</a>
-          <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/" rel="noopener noreferrer" target="_blank">HTML and CSS accessibility guidelines</a>
-          <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/" rel="noopener noreferrer" target="_blank">Main rich interface components accessibility guidelines</a>
-        </section>
+        <div class="top-page">
+            <div class="toc">
+                <h2>Table of content</h2>
+                <ul>
+                  <li>
+                      <a href="#buttons">Buttons and links</a>
+                  </li>
+                  <li>
+                      <a href="#contrasts">Color contrasts</a>
+                  </li>
+                  <li>
+                      <a href="#headings">Headings</a>
+                  </li>
+                  <li>
+                      <a href="#keyboard">Keyboard navigation</a>
+                  </li>
+                  <li>
+                      <a href="#modal">Modal</a>
+                  </li>
+                  <li>
+                      <a href="#form">Form</a>
+                  </li>
+                  <li>
+                      <a href="#accordion">Accordion menu</a>
+                  </li>
+                  <li>
+                      <a href="#tabs">Tabs</a>
+                  </li>
+                  <li>
+                      <a href="#map">Map</a>
+                  </li>
+                  <li>
+                      <a href="#carousel">Carousel</a>
+                  </li>
+                </ul>
+            </div>
+          
+            <section class="tools">
+                <p>Tools</p>
+                <ul>
+                    <li>
+                        <a class="tool-link" href="A11Y-checklist accessibility.pdf" target="_blank">Checklist</a>
+                    </li>
+                    <li>
+                        <a class="tool-link" href="https://contrast-ratio.com/" rel="noopener noreferrer" target="_blank">Contrast checker</a>
+                    </li>
+                    <li>
+                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/" rel="noopener noreferrer" target="_blank">HTML and CSS accessibility guidelines</a>
+                    </li>
+                    <li>
+                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/" rel="noopener noreferrer" target="_blank">Main rich interface components accessibility guidelines</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
       
       
         <section class="exercices">
@@ -78,11 +93,25 @@
             <div></div>
           </section>
       
-          <section class="exercice">
+          <section class="exercice contrasts">
               <h2 id="constrasts">Color contrast</h2>
-              <h3>Correct the color values to achieve sufficient contrast</h3>
-              <p>==> Afficher des couleurs adjacentes pas assez contrastées et proposer un outil pipette qui met à jour en live les éléments du DOM - inspecter avec un plugin ou contrast-ratio.com</p>
-              <div></div>
+              <h3>Correct the color values to achieve sufficient contrast (use a plugin or an online tool to check contrast)</h3>
+              
+              <div>
+                <div class="text-wrapper">
+                    <p class="text">
+                        This text should have enough contrast with its background
+                    </p>
+                </div>
+
+                <div class="pickers">
+                    <label for="colorPickerBg">Background color:</label>
+                    <input type="color" id="colorPickerBg" value="#ffffff">
+    
+                    <label for="colorPicker">Text color:</label>
+                    <input type="color" id="colorPicker" value="#838383">
+                </div>
+              </div>
           </section>
       
           <section class="exercice">

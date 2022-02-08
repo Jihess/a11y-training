@@ -12,6 +12,10 @@ body {
     padding: 0 2rem;
     font-family: 'Raleway', monospace, Arial, Helvetica, sans-serif;
 }
+::selection {
+    background: #ca485c;
+    color: #fff;
+}
 
 header {
     padding-top: 30px;
@@ -28,11 +32,24 @@ main {
     margin-bottom: 30px;
     padding-bottom: 30px;
 }
+
+.top-page {
+    display: flex;
+    align-items: flex-end;
+}
+
 ul {
     padding-left: 20px;
 }
+li {
+    margin: 1rem 0;
+}
 a {
     color: #ffb200;
+}
+
+.tools {
+    margin-left: 8rem;
 }
 
 .exercices {
@@ -61,4 +78,25 @@ a {
     font-size: 1.1rem;
     font-weight: 400;
     margin-top: -20px;
+}
+
+/* colors */
+.contrasts .text-wrapper {
+    width: 500px;
+    height: 150px;
+    border: 2px solid #ffb200;
+    background: #fff;
+    padding: 8px;
+}
+.contrasts .text-wrapper .text{
+    color: #838383;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.contrasts .pickers {
+    margin-top: 20px;
+}
+.contrasts input {
+    margin-right: 20px;
 }
