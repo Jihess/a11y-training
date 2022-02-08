@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accessibility training exercices</title>
+  <meta name="description" content="Exercices to have a better understanding of accessibility">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <header role="banner">
+        <h1>Accessibility Exercice list</h1>
+    </header>
+
+    <main>
+        <h2>Table of content</h2>
+        <ul>
+          <li>
+              <a href="#buttons">Buttons and links</a>
+          </li>
+          <li>
+              <a href="#contrasts">Color contrasts</a>
+          </li>
+          <li>
+              <a href="#headings">Headings</a>
+          </li>
+          <li>
+              <a href="#keyboard">Keyboard navigation</a>
+          </li>
+          <li>
+              <a href="#modal">Modal</a>
+          </li>
+          <li>
+              <a href="#form">Form</a>
+          </li>
+          <li>
+              <a href="#accordion">Accordion menu</a>
+          </li>
+          <li>
+              <a href="#tabs">Tabs</a>
+          </li>
+          <li>
+              <a href="#map">Map</a>
+          </li>
+          <li>
+              <a href="#carousel">Carousel</a>
+          </li>
+        </ul>
+      
+        <section class="tools">
+          <a class="tool-link" href="A11Y-checklist accessibility.pdf" target="_blank">Checklist</a>
+          <a class="tool-link" href="https://contrast-ratio.com/" rel="noopener noreferrer" target="_blank">Contrast checker</a>
+          <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/" rel="noopener noreferrer" target="_blank">HTML and CSS accessibility guidelines</a>
+          <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/" rel="noopener noreferrer" target="_blank">Main rich interface components accessibility guidelines</a>
+        </section>
+      
+      
+        <section class="exercices">
+          <section class="exercice">
+            <h2 id="buttons">Buttons and links</h2>
+            <h3>Correct buttons code (if needed)</h3>
+            <p>==> Utiliser les aria-label, la classe .sr-only. Boutons icon only, disabled, "discover more" sans le context...</p>
+            <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="constrasts">Color contrast</h2>
+              <h3>Correct the color values to achieve sufficient contrast</h3>
+              <p>==> Afficher des couleurs adjacentes pas assez contrastées et proposer un outil pipette qui met à jour en live les éléments du DOM - inspecter avec un plugin ou contrast-ratio.com</p>
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="headings">Headings</h2>
+              <h3>Use screen reader to display the page structure and correct headings if needed</h3>
+              <p>==> Utiliser le rotor de VoiceOver ou équivalent NVDA pour avoir une liste des titres. Cela doit être logique (ils doivent modifier les niveaux de titre)</h></p>
+      
+              <div></div>
+          </section>
+      
+      
+          <section class="exercice">
+              <h2 id="keyboard">Keyboard navigation</h2>
+              <h3>Change elements order to have a consistent keyboard navigation</h3>
+              <p>==> Faire un DOM pas ordonné, ils doivent le corriger pour avoir une lecture cohérente</p>
+      
+              <div></div>
+          </section>
+      
+      
+          <section class="exercice">
+              <h2 id="modal">Modal</h2>
+              <h3>Make that modal accessible</h3>
+              <p>==> Focus sur close, titre modal, aria-modal, focus loop, focus sur bouton ouvrant à la fermeture</p>
+      
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="form">Form</h2>
+              <h3>Make that form accessible, including fields error and success message</h3>
+              <p>==> label liés aux champs, lecture des champs en erreur et des messages de succès/echec</p>
+      
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="accordion">Accordion menu</h2>
+              <h3>Make that accordion menu accessible</h3>
+              <p>==> aria-controls, aria-expanded...</p>
+      
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="tabs">Tabs</h2>
+              <h3>Make that tabs menu accessible</h3>
+              <p>==> aria-controls, aria-expanded...</p>
+      
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="map">Map</h2>
+              <h3>Find a (simple) solution to make map information accessible</h3>
+              <p>==> faire une liste (contenu alternatif)</p>
+      
+              <div></div>
+          </section>
+      
+          <section class="exercice">
+              <h2 id="carousel">Bonus : carousel (sûrement pas le temps !)</h2>
+              <h3>Make that carousel accessible: user must understand the controls and what happens when he uses them, what content is currently displayed</h3>
+                <p>==> Ajouter/supprimer des aria-hidden et aria-live</p>
+              <div></div>
+          </section>
+      
+        </section>
+    </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

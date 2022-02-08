@@ -1,0 +1,64 @@
+html {
+    background: #fff;
+}
+
+body {
+    background: #870160;
+    background: linear-gradient(135deg,#1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b) fixed;
+    -webkit-mask: linear-gradient(#000 0 0) top/100% calc(100% - 30px) no-repeat, radial-gradient(circle farthest-side,#000 98%,#0000) bottom/55.5px 60px repeat-x;
+    mask: linear-gradient(#000 0 0) top/100% calc(100% - 30px) no-repeat, radial-gradient(circle farthest-side,#000 98%,#0000) bottom/55.5px 60px repeat-x;
+    color: #fff;
+    margin-top: -25px;
+    padding: 0 2rem;
+    font-family: 'Raleway', monospace, Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding-top: 30px;
+    text-align: center;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+main {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+ul {
+    padding-left: 20px;
+}
+a {
+    color: #ffb200;
+}
+
+.exercices {
+    display: flex;
+    flex-direction: column;
+}
+
+.exercice {
+    margin: 3rem 0;
+}
+.exercice:not(:last-child):after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 3rem;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+
+
+.exercice h2 {
+    margin-top: 0;
+}
+.exercice h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: -20px;
+}
