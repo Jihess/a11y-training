@@ -4,6 +4,7 @@ const defaultColorBg = "#ffffff";
 const defaultColor = "#838383";
 
 window.addEventListener("load", initPickers, false);
+window.addEventListener("load", initMap, false);
 
 function initPickers() {
     colorPickerBg = document.querySelector("#colorPickerBg");
@@ -40,6 +41,21 @@ form.addEventListener('submit', (event) => {
   }
 });
 
+const modal = document.querySelector('.modal'),
+openModalBtn = document.getElementById('openModal'),
+closeModalBtn = document.getElementById('closeModal'),
+modalBackdrop = document.querySelector('.modal-backdrop');
+
+openModalBtn.addEventListener('click', () => {
+    modalBackdrop.removeAttribute('hidden');
+    modal.removeAttribute('hidden');
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modalBackdrop.setAttribute('hidden', '');
+    modal.setAttribute('hidden', '');
+});
+
 const openPanelsButtons = document.querySelectorAll('.accordion-section .open-panel');
 openPanelsButtons.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -51,3 +67,23 @@ openPanelsButtons.forEach(btn => {
     btn.nextElementSibling.toggleAttribute('hidden');
   });
 });
+
+function initMap() {
+  const myLatLng = { lat: 48.858370, lng: 2.294481 };
+  const map = new google.maps.Map(document.getElementById("gMap"), {
+    zoom: 12,
+    center: myLatLng,
+  });
+  const contentString = 
+    `<div class="gmap-content">
+      <p>Eiffel Tower: Champ de Mars, 5 Av. Anatole France, 75007 Paris</p>
+    </div>`;
+  const infoWindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+  const marker = new google.maps.Marker({
+    position: myLatLng,
+    map,
+  });
+  infoWindow.open(map,marker);
+}

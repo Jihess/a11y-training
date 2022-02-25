@@ -1,19 +1,11 @@
-html {
-    background: #fff;
-}
-
 body {
-    background: #870160;
-    background: linear-gradient(135deg,#1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b) fixed;
-    -webkit-mask: linear-gradient(#000 0 0) top/100% calc(100% - 30px) no-repeat, radial-gradient(circle farthest-side,#000 98%,#0000) bottom/55.5px 60px repeat-x;
-    mask: linear-gradient(#000 0 0) top/100% calc(100% - 30px) no-repeat, radial-gradient(circle farthest-side,#000 98%,#0000) bottom/55.5px 60px repeat-x;
+    background: #000;
     color: #fff;
-    margin-top: -25px;
     padding: 0 2rem;
     font-family: 'Raleway', monospace, Arial, Helvetica, sans-serif;
 }
 ::selection {
-    background: #ffb200;
+    background: #00c8ff;
     color: #fff;
 }
 .sr-only {
@@ -27,9 +19,7 @@ body {
     white-space: nowrap;
     border: 0;
 }
-
 header {
-    padding-top: 30px;
     text-align: center;
 }
 h1 {
@@ -56,27 +46,27 @@ li {
     margin: 1rem 0;
 }
 a {
-    color: #ffb200;
+    color: #00c8ff;
 }
 .button {
     cursor: pointer;
     padding: .4rem;
-    border: 2px solid #ffb200;
+    border: 2px solid #00c8ff;
     box-shadow: none;
     border-radius: 10px;
     color: #fff;
-    background: #ffb200;
+    background: #00c8ff;
     transition: all .4s ease;
 }
 .button:hover {
-    background: #ff7700;
-    border-color: #ff7700;
+    background: #0290b7;
+    border-color: #0290b7;
 }
 .button:focus,
 .button:focus-visible,
 a:focus,
 a:focus-visible {
-    outline: 2px solid #000;
+    outline: 2px solid #ffb200;
 }
 .tools {
     margin-left: 8rem;
@@ -125,7 +115,7 @@ a:focus-visible {
 .contrasts .text-wrapper {
     width: 500px;
     height: 150px;
-    border: 2px solid #ffb200;
+    border: 2px solid #00c8ff;
     background: #fff;
     padding: 8px;
 }
@@ -172,7 +162,7 @@ form label {
     margin: 1rem 0 .5rem;
 }
 form .error {
-    color: #ffb200;
+    color: #00c8ff;
     margin-top: .5rem;
 }
 form input,
@@ -185,7 +175,7 @@ form input[type="submit"] {
 }
 form .message:not(:empty) {
     margin: 1rem 0;
-    border: 3px dashed rgb(95, 223, 148);
+    border: 3px dashed #00c8ff;
     padding: 1rem;
     font-size: 1.3rem;
     font-weight: 900;

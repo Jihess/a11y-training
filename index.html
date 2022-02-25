@@ -16,7 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-vt.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -39,12 +40,6 @@
                       <a href="#contrasts">Color contrasts</a>
                   </li>
                   <li>
-                      <a href="#headings">Headings</a>
-                  </li>
-                  <li>
-                      <a href="#keyboard">Keyboard navigation</a>
-                  </li>
-                  <li>
                       <a href="#modal">Modal</a>
                   </li>
                   <li>
@@ -54,19 +49,13 @@
                       <a href="#accordion">Accordion menu</a>
                   </li>
                   <li>
-                      <a href="#tabs">Tabs</a>
-                  </li>
-                  <li>
                       <a href="#map">Map</a>
-                  </li>
-                  <li>
-                      <a href="#carousel">Carousel</a>
                   </li>
                 </ul>
             </div>
           
             <section class="tools">
-                <p>Tools</p>
+                <h2>Tools</h2>
                 <ul>
                     <li>
                         <a class="tool-link" href="A11Y-checklist accessibility.pdf" target="_blank">Checklist</a>
@@ -117,6 +106,12 @@
                             <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
                         </svg>
                     </a>
+                    <p>OR</p>
+                    <button type="button" class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                        </svg>
+                    </button>
                 </div>
                 <div class="part">
                     <p>Button text and icon</p>
@@ -158,49 +153,33 @@
               </div>
           </section>
       
-          <section class="exercice">
-              <h2 id="headings">Headings</h2>
-              <h3>Use screen reader to display the page structure and correct headings if needed</h3>
-              <p>==> Utiliser le rotor de VoiceOver ou équivalent NVDA pour avoir une liste des titres. Cela doit être logique (ils doivent modifier les niveaux de titre)</h></p>
-      
-              <div></div>
-          </section>
-      
-      
-          <section class="exercice">
-              <h2 id="keyboard">Keyboard navigation</h2>
-              <h3>Change elements order to have a consistent keyboard navigation</h3>
-              <p>==> Faire un DOM pas ordonné, ils doivent le corriger pour avoir une lecture cohérente</p>
-      
-              <div></div>
-          </section>
-      
       
           <section class="exercice">
               <h2 id="modal">Modal</h2>
               <h3>Make that modal accessible</h3>
-              <p>==> Focus sur close, titre modal, aria-modal, focus loop, focus sur bouton ouvrant à la fermeture</p>
       
               <div class="modal-section">
                   <button type="button" id="openModal" class="button open-modal">open modal</button>
 
                 <div class="modal-backdrop" hidden></div>
                 <div class="modal" hidden>
-                    <button type="button" id="closeModal">
+                    <button type="button" id="closeModal" class="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
                         </svg>
                     </button>
+
                     <h1>Modal heading</h1>
                     <p>Modal Content</p>
-                    <button type="button">I agree</button>
+
+                    <button type="button" class="button">I agree</button>
                 </div>
               </div>
           </section>
       
           <section class="exercice">
               <h2 id="form">Form</h2>
-              <h3>Make that form accessible, including errors and success messages</h3>
+              <h3>Make that form accessible, including errors and success messages.<br>Last name is required.</h3>
       
               <div class="form-section">
                   <form action="" id="trainingForm">
@@ -210,7 +189,7 @@
                       </div>
                       <div>
                         <label>Last name</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="your last name" required>
+                        <input type="text" name="lastname" id="lastname" placeholder="your last name">
                         <label class="error" hidden>Label is required</label>
                       </div>
 
@@ -261,26 +240,10 @@
           </section>
       
           <section class="exercice">
-              <h2 id="tabs">Tabs</h2>
-              <h3>Make that tabs menu accessible</h3>
-              <p>==> aria-controls, aria-expanded...</p>
-      
-              <div></div>
-          </section>
-      
-          <section class="exercice">
               <h2 id="map">Map</h2>
-              <h3>Find a (simple) solution to make map information accessible</h3>
-              <p>==> faire une liste (contenu alternatif)</p>
-      
-              <div></div>
-          </section>
-      
-          <section class="exercice">
-              <h2 id="carousel">Bonus : carousel (sûrement pas le temps !)</h2>
-              <h3>Make that carousel accessible: user must understand the controls and what happens when he uses them, what content is currently displayed</h3>
-                <p>==> Ajouter/supprimer des aria-hidden et aria-live</p>
-              <div></div>
+              <h3>Find a (simple) solution to make the information on the map accessible</h3>
+              
+              <div id="gMap"></div>
           </section>
       
         </section>
@@ -288,6 +251,7 @@
 
 
   <script src="app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2" async></script>
 </body>
 
 </html>
