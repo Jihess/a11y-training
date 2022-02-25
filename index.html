@@ -72,13 +72,26 @@
                         <a class="tool-link" href="A11Y-checklist accessibility.pdf" target="_blank">Checklist</a>
                     </li>
                     <li>
-                        <a class="tool-link" href="https://contrast-ratio.com/" rel="noopener noreferrer" target="_blank">Contrast checker</a>
+                        <a class="tool-link" href="https://contrast-ratio.com/" target="_blank" rel="noopener noreferrer">Contrast checker</a>
                     </li>
                     <li>
-                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/" rel="noopener noreferrer" target="_blank">HTML and CSS accessibility guidelines</a>
+                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/" target="_blank" rel="noopener noreferrer">HTML and CSS accessibility guidelines</a>
+                        <ul>
+                            <li>
+                                <a class="tool-link" href="https://www.accede-web.com/en/guidelines/html-css/images-and-icons/managing-alternative-text-on-svg-scalable-vector-graphics/" target="_blank" rel="noopener noreferrer">SVG and alternative text</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/" rel="noopener noreferrer" target="_blank">Main rich interface components accessibility guidelines</a>
+                        <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/" target="_blank" rel="noopener noreferrer">Main rich interface components accessibility guidelines</a>
+                        <ul>
+                            <li>
+                                <a class="tool-link" href="https://www.accede-web.com/en/guidelines/rich-interface-components/modal-windows/" target="_blank" rel="noopener noreferrer">Modal windows</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/" target="_blank" rel="noopener noreferrer">Accessible hiding</a>
                     </li>
                 </ul>
             </section>
@@ -88,16 +101,47 @@
         <section class="exercices">
           <section class="exercice">
             <h2 id="buttons">Buttons and links</h2>
-            <h3>Correct buttons code (if needed)</h3>
-            <p>==> Utiliser les aria-label, la classe .sr-only. Boutons icon only, disabled, "discover more" sans le context...</p>
-            <div></div>
+            <h3>Correct buttons and links code if needed to make them accessible</h3>
+
+            <div class="buttons-section">
+                <div class="part">
+                    <p>Button text only</p>
+                    <button type="button" class="button">
+                        close
+                    </button>
+                </div>
+                <div class="part">
+                    <p>Button icon only</p>
+                    <a role="button" class="button" title="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="part">
+                    <p>Button text and icon</p>
+                    <button type="button" class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                        </svg>
+                        close
+                    </button>
+                </div>
+                <div class="part">
+                    <p>Link</p>
+                    <div>
+                        <h4>About France</h4>
+                        <p>France is an western Europe country... <a href="">Discover more</a></p>
+                    </div>
+                </div>
+            </div>
           </section>
       
           <section class="exercice contrasts">
               <h2 id="constrasts">Color contrast</h2>
               <h3>Correct the color values to achieve sufficient contrast (use a plugin or an online tool to check contrast)</h3>
               
-              <div>
+              <div class="color-section">
                 <div class="text-wrapper">
                     <p class="text">
                         This text should have enough contrast with its background
@@ -137,23 +181,83 @@
               <h3>Make that modal accessible</h3>
               <p>==> Focus sur close, titre modal, aria-modal, focus loop, focus sur bouton ouvrant à la fermeture</p>
       
-              <div></div>
+              <div class="modal-section">
+                  <button type="button" id="openModal" class="button open-modal">open modal</button>
+
+                <div class="modal-backdrop" hidden></div>
+                <div class="modal" hidden>
+                    <button type="button" id="closeModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/>
+                        </svg>
+                    </button>
+                    <h1>Modal heading</h1>
+                    <p>Modal Content</p>
+                    <button type="button">I agree</button>
+                </div>
+              </div>
           </section>
       
           <section class="exercice">
               <h2 id="form">Form</h2>
-              <h3>Make that form accessible, including fields error and success message</h3>
-              <p>==> label liés aux champs, lecture des champs en erreur et des messages de succès/echec</p>
+              <h3>Make that form accessible, including errors and success messages</h3>
       
-              <div></div>
+              <div class="form-section">
+                  <form action="" id="trainingForm">
+                      <div>
+                        <label>First name</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="your first name">
+                      </div>
+                      <div>
+                        <label>Last name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="your last name" required>
+                        <label class="error" hidden>Label is required</label>
+                      </div>
+
+                      <div>
+                        <label>Sex</label>
+                        <select name="yourSex" id="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                      </div>
+
+                      <input type="submit" class="button" value="send">
+
+                      <div class="status">
+                          <!-- error or success message -->
+                          <div class="message"></div>
+                      </div>
+                  </form>
+              </div>
           </section>
       
           <section class="exercice">
               <h2 id="accordion">Accordion menu</h2>
               <h3>Make that accordion menu accessible</h3>
-              <p>==> aria-controls, aria-expanded...</p>
       
-              <div></div>
+              <div class="accordion-section">
+                <button type="button" class="button open-panel">
+                    Panel 1 toggle button
+                </button>
+                <div class="panel" hidden>
+                    Panel 1 content
+                </div>
+
+                <button type="button" class="button open-panel">
+                    Panel 2 toggle button
+                </button>
+                <div class="panel" hidden>
+                    Panel 2 content
+                </div>
+
+                <button type="button" class="button open-panel">
+                    Panel 3 toggle button
+                </button>
+                <div class="panel" hidden>
+                    Panel 3 content
+                </div>
+              </div>
           </section>
       
           <section class="exercice">
